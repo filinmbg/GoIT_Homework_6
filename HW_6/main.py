@@ -73,9 +73,9 @@ def main(folder: Path):
     for file in parser.AMR_AUDIO:
         handle_media(file, folder / "audio" / "AMR")
     for file in parser.other:
-        handle_media(file, folder / "other")
+        handle_other(file, folder / "other")
     for file in parser.ARCHIVES:
-        handle_media(file, folder / "ARCHIVES")
+        handle_archive(file, folder / "ARCHIVES")
     for folder in parser.FOLDERS[::-1]:
         handle_folder(folder)
 
